@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehiculos</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="ex1" class="modal">
+    <form action="" id="editVehiculo" method="POST">
+        <h1 id="editTitle">Editar Vehiculo</h1>
+        <label for="editID">ID: </label>
+        <input type="number" name="id" id="editID" readonly> 
+        <br>
+        <br>
+        <label for="editPlaca">Placa: </label>
+        <input type="text" name="placa" id="editPlaca" required>
+        <br>
+        <br>
+        <label for="editModelo">Modelo: </label>
+        <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+               type = "number"
+               maxlength = "4" name="modelo" id="editModelo" max="2024" required>
+        <br>
+        <br>
+        <label for="editColor">Color: </label>
+        <input type="text" name="color" id="editColor" required>
+        <br>
+        <br>
+        <label for="editPuertas">Puertas: </label>
+        <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+               type = "number"
+               maxlength = "1" name="puertas" id="editPuertas" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <div id="ex2" class="modal">
+    <form action="" id="newVehiculo" method="POST">
+        <h1 id="title">Editar Vehiculo</h1>
+        <label for="newPlaca">Placa: </label>
+        <input type="text" name="placa" id="newPlaca" required>
+        <br>
+        <br>
+        <label for="newModelo">Modelo: </label>
+        <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+               type = "number"
+               maxlength = "4" name="modelo" id="newModelo" max="2024" required>
+        <br>
+        <br>
+        <label for="newColor">Color: </label>
+        <input type="text" name="color" id="newColor" required>
+        <br>
+        <br>
+        <label for="newPuertas">Puertas: </label>
+        <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+               type = "number"
+               maxlength = "1" name="puertas" id="newPuertas" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <center>
+    <h1 style="color: white">Listado de Vehiculos 1490-20-556</h1>
+    <table id="vehiculosTable">
+      <th>ID</th>
+      <th>Placa</th>
+      <th>Modelo</th>
+      <th>Color</th>
+      <th>Puertas</th>
+      <th></th>
+    </table>
+    <br>
+    <a href="#ex2" rel="modal:open" class="btnSelect">Ingresar Vehiculo</a>
+  </center>
+</body>
+</html>

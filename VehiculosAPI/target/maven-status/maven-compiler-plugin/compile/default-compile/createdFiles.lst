@@ -1,0 +1,5 @@
+gt\edu\umg\vehiculosapi\DAO\VehiculoDAO.class
+gt\edu\umg\vehiculosapi\DTO\VehiculoDTO.class
+gt\edu\umg\vehiculosapi\service\ApplicationConfig.class
+gt\edu\umg\vehiculosapi\util\MySqlConexion.class
+gt\edu\umg\vehiculosapi\service\RestService.class
